@@ -10,7 +10,7 @@ class Create_users
 			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
 			'name' => array('constraint' => 100, 'type' => 'varchar', 'default' => ''),
 			'nick' => array('constraint' => 100, 'type' => 'varchar', 'default' => ''),
-			'gid' => array('constraint' => 11, 'type' => 'int', 'default' => null),
+			'gid' => array('constraint' => 11, 'type' => 'int', 'default' => null, 'null' => true),
 			'email' => array('constraint' => 200, 'type' => 'varchar', 'default' => ''),
 
 		), array('id'));
