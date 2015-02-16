@@ -31,3 +31,7 @@ desktop.ini
 /fuel/app/logs/*/*/*
 /fuel/app/cache/*/*
 /fuel/app/config/crypt.php
+
+# FuelPHP generated config files
+/fuel/app/config/*/db.php
+/fuel/app/config/*/migrations.php
