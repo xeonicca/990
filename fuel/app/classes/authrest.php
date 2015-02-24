@@ -11,12 +11,16 @@ class AuthRest extends Controller_Rest {
     // use JSON as default response type
     $this->format = 'json';
 
+  }
+
+  public function router($resource, $arguments){
     // 檢查是否已經登入
     if(true){
-      // donothing
+      // use default RESTful controller router
+      parent::router($resource, $arguments);
     }else{
       // 尚未登入
-      return new Response('login needed', 401);
+      return Response::forge('login needed', 401);
     }
   }
 }
