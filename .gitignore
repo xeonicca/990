@@ -9,6 +9,7 @@
 build
 .idea
 nbproject/
+*.swp
 
 # hidden files created by Windows
 Thumbs.db
