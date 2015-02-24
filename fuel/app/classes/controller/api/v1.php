@@ -7,6 +7,6 @@ class Controller_Api_v1 extends AuthRest {
   }
 
   public function get_data(){
-    return array(123);
+    $this->response(array(123));
   }
 }
