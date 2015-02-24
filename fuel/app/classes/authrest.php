@@ -8,7 +8,7 @@ class AuthRest extends Controller_Rest {
     parent::before();
 
     // use JSON as default response type
-    $this->format = 'json';
+    $this->rest_format = 'json';
   }
 
   /**
