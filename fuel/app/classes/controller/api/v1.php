@@ -59,4 +59,22 @@ class Controller_Api_v1 extends AuthRest {
     }
     $user->save();
   }
+
+  /**
+   * 刪除使用者
+   */
+  public function delete_user($id){
+    // implement is not needed
+    // save all user history. Call authenticator to check if user can login.
+    return $this->response('not implemented yet', 501);
+  }
+
+  /**
+   * 新增使用者
+   */
+  public function post_user($id){
+    // implement is not needed
+    // authenticator should create user on first time user logged in.
+    return $this->response('not implemented yet', 501);
+  }
 }
