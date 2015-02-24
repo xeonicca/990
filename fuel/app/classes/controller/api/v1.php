@@ -33,4 +33,30 @@ class Controller_Api_v1 extends AuthRest {
       'gid' => $user->gid,
     ));
   }
+
+  /**
+   * 更新使用者資料
+   */
+  public function put_user($id){
+    $user = Model_User::find($id);
+
+    if($user === null){
+      return $this->response('user not found', 404);
+    }
+
+    // 只有以下的 key 才接受更新，其他的不予理會
+    $validKeys = array(
+      'name',
+      'nick',
+      'email',
+      'gid',
+    );
+
+    foreach($validKeys as $keyName){
+      if(Input::put($keyName, null) !== null){
+        $user->$keyName = Input::put($keyName);
+      }
+    }
+    $user->save();
+  }
 }
