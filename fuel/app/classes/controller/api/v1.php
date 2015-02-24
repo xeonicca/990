@@ -30,7 +30,7 @@ class Controller_Api_v1 extends AuthRest {
       'name' => $user->name,
       'nick' => $user->nick,
       'email' => $user->email,
-      'groupId' => $user->gid,
+      'gid' => $user->gid,
     ));
   }
 }
